@@ -13,23 +13,23 @@ public class GolfProblem {
 			totalscore+= score;
 			
 			if(par==score) {
-				System.out.println("Par");
+				System.out.println("par");
 			}
 			
 			else if(score-par == -1) {
-				System.out.println("Birdie");
+				System.out.println("birdie");
 			}
 			
 			else if(score-par == -2) {
-				System.out.println("Eagle");
+				System.out.println("eagle");
 			}
 			
 			else if(score-par == 1) {
-				System.out.println("Bogey");
+				System.out.println("bogey");
 			}
 			
 			else {
-				System.out.println("Double Bogey");
+				System.out.println("double bogey");
 			}
 			
 		}
@@ -37,10 +37,10 @@ public class GolfProblem {
 			System.out.println("Par");
 		}
 		else if(totalpar < totalscore) {
-			System.out.println((totalpar-totalscore) + " under par");
+			System.out.println((totalscore-totalpar) + " over par");
 		}
 		else {
-			System.out.println((totalscore - totalpar) + " over par");
+			System.out.println((totalpar - totalscore) + " under par");
 		}
 		
 	}

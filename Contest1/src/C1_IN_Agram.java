@@ -24,6 +24,8 @@ public class C1_IN_Agram {
 		suit = temp.charAt(1);
 		
 		System.out.println(num + " "+ suit);
+		
+		cards = new pair[5];
 		for(int i=0; i<5; i++) {
 			temp = in.next();
 			int x = conv(temp.charAt(0));
@@ -31,7 +33,7 @@ public class C1_IN_Agram {
 			cards[i] = new pair(x, y);
 		}
 		
-		System.out.println(Arrays.toString(cards));
+		System.out.println(cards[0].suit);
 		Arrays.sort(cards);
 		System.out.println(Arrays.toString(cards));
 	}
@@ -42,7 +44,7 @@ public class C1_IN_Agram {
 		else if(c == 'J') return 11;
 		else if(c == 'Q') return 12;
 		else if(c == 'K') return 13;
-		else return c-'O';
+		else return c-'0';
  	}
 	
 	static char conv2(int c) {
@@ -51,7 +53,7 @@ public class C1_IN_Agram {
 		else if(c == 11) return 'J';
 		else if(c == 12) return 'Q';
 		else if(c == 13) return 'K';
-		else return (char)(c+'O');
+		else return (char)(c+'0');
  	}
 	
 	
@@ -63,7 +65,7 @@ public class C1_IN_Agram {
 			if(p.suit == suit) s.add(p);
 		}
 		
-		
+		Collections.sort(s);
 		System.out.println(s);
 		
 		pair ans = null;
@@ -73,6 +75,8 @@ public class C1_IN_Agram {
 				break;
 			}
 		}
+		if(ans==null) System.out.println(s.get(0));
+		
 		System.out.println(conv2(ans.num) + ""+ ans.suit);
 	}
 	

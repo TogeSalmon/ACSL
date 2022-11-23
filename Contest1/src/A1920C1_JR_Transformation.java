@@ -43,7 +43,7 @@ public class A1920C1_JR_Transformation {
 		
 		//step 4
 		ans = n.substring(0, idx) + num;
-		System.out.println(ans);
+		//System.out.println(ans);
 		
 		//step 5
 		for(int i=0;i<p-1;i++) {
